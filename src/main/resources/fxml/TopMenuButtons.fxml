@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+
+
+<HBox spacing="10.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.moja.biblioteczka.controllers.TopMenuButtonController">
+   <children>
+      <ToggleButton mnemonicParsing="false" onAction="#openLibrary" prefHeight="54.0" prefWidth="109.0" text="Biblioteka">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleButtons" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton mnemonicParsing="false" onAction="#openListBooks" prefHeight="55.0" prefWidth="117.0" text="Lista Ksiazek" toggleGroup="$toggleButtons" />
+      <ToggleButton mnemonicParsing="false" onAction="#openStatistic" prefHeight="56.0" prefWidth="98.0" text="Statystyki" toggleGroup="$toggleButtons" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</HBox>
