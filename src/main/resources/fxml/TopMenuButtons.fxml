@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.HBox?>
 
 
-<HBox spacing="10.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.moja.biblioteczka.controllers.TopMenuButtonController">
+<HBox spacing="10.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.moja.biblioteczka.controllers.TopMenuButtonsController">
    <children>
       <ToggleButton mnemonicParsing="false" onAction="#openLibrary" prefHeight="54.0" prefWidth="109.0" text="Biblioteka">
          <toggleGroup>
