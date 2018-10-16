@@ -2,10 +2,14 @@ package pl.moja.biblioteczka.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ToggleGroup;
 
 public class TopMenuButtonsController {
 
     private MainController mainController;
+
+    @FXML
+    private ToggleGroup toggleButtons;
 
     public void setMainController(MainController mainController) {
         this.mainController = mainController;
@@ -25,4 +29,9 @@ public class TopMenuButtonsController {
     }
 
 
+    public void addBook() {
+        if (toggleButtons.getSelectedToggle()!=null) {
+            toggleButtons.getSelectedToggle().setSelected(false);
+        }
+    }
 }
