@@ -1,4 +1,6 @@
 package pl.moja.biblioteczka.database.model;
 
-public class Book {
+import org.dom4j.tree.BaseElement;
+
+public class Book implements BaseModel {
 }

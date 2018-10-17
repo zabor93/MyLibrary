@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import pl.moja.biblioteczka.database.dbUtils.HibernateUtil;
 import pl.moja.biblioteczka.utils.FxmlUtils;
 
 import java.util.Locale;
@@ -26,6 +27,7 @@ public class Main extends Application {
         primarystage.setScene(scene);
         primarystage.setTitle(FxmlUtils.getResourceBundle().getString("title.application"));
         primarystage.show();
+        HibernateUtil.initDatabase();
 
     }
 }
