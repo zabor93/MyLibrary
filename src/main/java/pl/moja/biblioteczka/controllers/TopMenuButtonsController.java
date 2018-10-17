@@ -6,6 +6,12 @@ import javafx.scene.control.ToggleGroup;
 
 public class TopMenuButtonsController {
 
+
+    public static final String LIBRARY_FXML="/fxml/Library.fxml";
+    public static final String LISTBOOKS_FXML="/fxml/ListBooks.fxml";
+    public static final String STATISTICS_FXML="/fxml/Statistics.fxml";
+    public static final String ADDBOOK_FXML="/fxml/AddBook.fxml";
+
     private MainController mainController;
 
     @FXML
@@ -17,21 +23,24 @@ public class TopMenuButtonsController {
 
     @FXML
     public void openLibrary() {
-        System.out.println("Open libraty");
+       mainController.setCenter(LIBRARY_FXML);
     }
+
     @FXML
     public void openListBooks() {
-        System.out.println("Open list books");
+        mainController.setCenter(LISTBOOKS_FXML);
     }
+
     @FXML
     public void openStatistic() {
-        System.out.println("Open statustsaic");
+        mainController.setCenter(STATISTICS_FXML);
     }
 
-
+    @FXML
     public void addBook() {
-        if (toggleButtons.getSelectedToggle()!=null) {
+        if (toggleButtons.getSelectedToggle() != null) {
             toggleButtons.getSelectedToggle().setSelected(false);
         }
+        mainController.setCenter(ADDBOOK_FXML);
     }
 }
