@@ -13,5 +13,7 @@ public interface GenericDao<T, ID extends Serializable> {
 
     void flush();
 
+    T edit(T entity);
+
 
 }

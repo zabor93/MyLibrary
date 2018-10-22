@@ -5,10 +5,20 @@
       <configuration>
         <datasource-map>
           <unit-entry name="Database:hibernate.cfg.xml" />
-          <unit-entry name="Hibernate.cfg.xml" />
+          <unit-entry name="Hibernate.cfg.xml" value="81a413ba-ddbf-4ddc-a8cd-a39476215789" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/Hibernate.cfg.xml" />
+      </configuration>
+    </facet>
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <setting name="provider-name" value="" />
+        <datasource-mapping>
+          <factory-entry name="JPA" value="66c794f8-c423-49e2-9468-7ed4475d68b2" />
+        </datasource-mapping>
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>
     </facet>
   </component>

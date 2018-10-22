@@ -4,6 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.io.Serializable;
 
+
 public abstract class GenericJpaDao<T,ID extends Serializable> implements GenericDao<T,ID> {
 
     private Class<T> persistenceClass;
@@ -42,5 +43,15 @@ public abstract class GenericJpaDao<T,ID extends Serializable> implements Generi
     @Override
     public void flush() {
         getEntityManager().flush();
+    }
+
+    @Override
+    public T edit(T emp) {
+        // TODO Auto-generated method stub
+        try{
+            return entityManager.merge(emp);
+        } catch(Exception ex) {
+            return null;
+        }
     }
 }
