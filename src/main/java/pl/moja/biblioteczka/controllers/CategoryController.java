@@ -17,6 +17,9 @@ public class CategoryController {
     private Button addCategoryButton;
 
     @FXML
+    private Button removeCategoryButton;
+
+    @FXML
     private ComboBox<CategoryFx> categoryComboBox;
 
     private CategoryModel categoryModel;
@@ -24,6 +27,8 @@ public class CategoryController {
     @FXML
     public void initialize(){
         this.categoryModel = new CategoryModel();
+        this.categoryModel.init();
+        this.categoryComboBox.setItems(this.categoryModel.getCategoryList());
         initBindings();
     }
 
@@ -34,5 +39,12 @@ public class CategoryController {
     public void addCategoryOnAction() {
         categoryModel.saveCategoryInDataBase(categoryTextField.getText());
         categoryTextField.clear();
+    }
+
+    public void DeleteCategoryButton( ) {
+    }
+
+    public void onActionDeleteButton() {
+
     }
 }

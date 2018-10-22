@@ -17,6 +17,7 @@
             <Button fx:id="addCategoryButton" mnemonicParsing="false" onAction="#addCategoryOnAction" text="Dodaj" />
             <Label text="Wybierz kategorię:" />
             <ComboBox fx:id="categoryComboBox" />
+            <Button fx:id="removeCategoryButton" mnemonicParsing="false" onAction="#DeleteCategoryButton" text="Usun" />
          </children>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

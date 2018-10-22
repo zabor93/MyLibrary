@@ -6,7 +6,9 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import pl.moja.biblioteczka.database.dao.CategoryDao;
 import pl.moja.biblioteczka.database.dbUtils.HibernateUtil;
+import pl.moja.biblioteczka.database.model.Category;
 import pl.moja.biblioteczka.utils.FxmlUtils;
 
 import java.util.Locale;
@@ -28,7 +30,9 @@ public class Main extends Application {
         primarystage.setTitle(FxmlUtils.getResourceBundle().getString("title.application"));
         primarystage.show();
         HibernateUtil.initDatabase();
-
+        CategoryDao categoryDao=new CategoryDao();
+        Category category = new Category("Kuba");
+        categoryDao.save(category);
 
     }
 }
